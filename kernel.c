@@ -1,6 +1,7 @@
 #include "vga.h"
 #include "keyboard.h"
 #include "storage.h"
+#include "desktop.h"
 #include "terminal.h"
 
 void show_blue_progress_bar() {
@@ -100,11 +101,11 @@ void k_main() {
             print_int(percent);
             print("%");
 
-            sleep(50); // Fast loading speed for quick boot
+            sleep(50);
         }
         
         sleep(150);
-        start_desktop();
+        start_terminal();
     } else {
         // First Time Installation Flow
         print("\n\n\n\n\n\n\n\n\n                               Press any key to boot...");
@@ -146,6 +147,6 @@ void k_main() {
         }
 
         show_blue_progress_bar();
-        start_desktop();
+        start_terminal();
     }
 }
