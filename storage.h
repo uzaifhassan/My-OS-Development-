@@ -68,7 +68,6 @@ void scan_real_hardware_disks() {
     }
 }
 
-// Read Sector with Safe Timeout
 void ata_read_sector(unsigned short io_port, unsigned int lba, unsigned char* target_buf) {
     outb(io_port + 6, 0xE0 | ((lba >> 24) & 0x0F));
     outb(io_port + 2, 1);
@@ -91,7 +90,6 @@ void ata_read_sector(unsigned short io_port, unsigned int lba, unsigned char* ta
     }
 }
 
-// Write Sector with Safe Timeout
 void ata_write_sector(unsigned short io_port, unsigned int lba, unsigned char* source_buf) {
     outb(io_port + 6, 0xE0 | ((lba >> 24) & 0x0F));
     outb(io_port + 2, 1);
