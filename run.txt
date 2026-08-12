@@ -1,0 +1,5 @@
+qemu-img create -f raw aurex_harddisk.img 100M
+
+
+
+qemu-system-i386 -cdrom uzaif_os.iso -hda aurex_harddisk.img
