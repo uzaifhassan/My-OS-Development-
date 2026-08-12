@@ -87,7 +87,7 @@ int strcmp(char* s1, char* s2) {
 void k_main() {
     clear_screen();
     print("==================================================\n");
-    print("        UZAIF OS - CLI VERSION 1.0              \n");
+    print("                   Aurex OS                       \n");
     print("==================================================\n");
     print("Type 'help' to see available commands.\n\n");
 
@@ -116,9 +116,10 @@ void k_main() {
                 clear_screen();
             } 
             else if (strcmp(cmd_buffer, "sysinfo") == 0) {
-                print("OS Name: Uzaif OS\n");
+                print("OS Name: Aurex OS\n");
                 print("Architecture: x86 (32-bit Bare-metal)\n");
                 print("Kernel: C + Assembly\n");
+                print("Developer: Uzaif\n");
             } 
             else if (cmd_buffer[0] == 'e' && cmd_buffer[1] == 'c' && cmd_buffer[2] == 'h' && cmd_buffer[3] == 'o' && cmd_buffer[4] == ' ') {
                 print(&cmd_buffer[5]);
@@ -135,7 +136,7 @@ void k_main() {
             // Reset buffer and show prompt again
             cmd_index = 0;
             for(int i=0; i<256; i++) cmd_buffer[i] = 0;
-            print("uzaif-os> ");
+            print("Aurex OS> ");
         } 
         else if (c == '\b') {
             if (cmd_index > 0) {
